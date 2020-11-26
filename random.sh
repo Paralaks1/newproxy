@@ -3,17 +3,17 @@
 
 array=( 1 2 3 4 5 6 7 8 9 0 a b c d e f )
 
-MAXCOUNT=$(awk 'NR==3' </root/veriler.list )
+MAXCOUNT=$(awk 'NR==3' </root/newproxy/veriler.list )
 
 MAXCOUNT="$(( 10#${MAXCOUNT/[^0-9]} + 0 ))"
 
 
-SUBNET=$(awk 'NR==2' </root/veriler.list )
+SUBNET=$(awk 'NR==2' </root/newproxy/veriler.list )
 
 SUBNET="$(( 10#${SUBNET/[^0-9]} + 0 ))"
 
 
-network=$(awk 'NR==1' </root/veriler.list )
+network=$(awk 'NR==1' </root/newproxy/veriler.list )
 
 network="${network//[[:space:]]/}"
 

@@ -1,9 +1,9 @@
 #!/bin/bash
-proxylogin=`head -4 /root/veriler.list | tail -1`
+proxylogin=`head -4 /root/newproxy/veriler.list | tail -1`
 proxylogin="${proxylogin//[[:space:]]/}"
-proxypass=`head -5 /root/veriler.list | tail -1`
+proxypass=`head -5 /root/newproxy/veriler.list | tail -1`
 proxypass="${proxypass//[[:space:]]/}"
-sunucuip=`head -8 /root/veriler.list | tail -1`
+sunucuip=`head -8 /root/newproxy/veriler.list | tail -1`
 sunucuip="${sunucuip//[[:space:]]/}"
 echo daemon
 echo nserver 8.8.4.4
@@ -26,7 +26,7 @@ echo flush
 
 
 
-port=$(awk 'NR==6' </root/veriler.list )
+port=$(awk 'NR==6' </root/newproxy/veriler.list )
 
 port="$(( 10#${port/[^0-9]} + 0 ))"
 
